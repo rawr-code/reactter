@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
-import logo from '../../images/logo.svg';
 import './App.css';
+
+// Material UI Components
+import CssBaseline from '@material-ui/core/CssBaseline';
+
+import Header from '../Header';
+import Main from '../Main';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-        </header>
+        <CssBaseline />
+        <Header />
+        <Main />
       </div>
     );
   }

@@ -1,5 +1,6 @@
 {
-  "name": "twitter-clone-with-reactjs",
+  "name": "reactter",
+  "description": "twitter-clone-with-reactjs",
   "author": "Emmanuel Villegas <emmanuelvillegas01@gmail.com>",
   "version": "0.1.0",
   "private": true,
