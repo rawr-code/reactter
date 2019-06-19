@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './styles.scss';
 
 // Atoms
@@ -15,6 +16,11 @@ const Toolbar = ({ title, icon: ToolbarIcon }) => {
       )}
     </header>
   );
+};
+
+Toolbar.propTypes = {
+  title: PropTypes.string.isRequired,
+  Icon: PropTypes.func
 };
 
 export default Toolbar;

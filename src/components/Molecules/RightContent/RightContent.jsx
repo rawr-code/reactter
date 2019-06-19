@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './styles.scss';
 
 // Atoms
@@ -14,6 +15,12 @@ const RightContent = ({ title, icon, children }) => {
       </div>
     </div>
   );
+};
+
+RightContent.propTypes = {
+  title: PropTypes.string.isRequired,
+  Icon: PropTypes.func,
+  children: PropTypes.oneOfType([PropTypes.func, PropTypes.array])
 };
 
 export default RightContent;
