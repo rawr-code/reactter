@@ -1,0 +1,23 @@
+.trend {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #f5f8fa;
+  }
+}
+
+.trend__info {
+  font-size: 13px;
+  color: rgb(101, 119, 134);
+}
+.trend__title {
+  margin: 4px 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+.trend__info--big {
+  font-size: 15px;
+}
