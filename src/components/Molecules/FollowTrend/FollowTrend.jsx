@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 
 // Logo
-import logo from '../../../images/twitter.jpg';
+import logo from '../../../images/logo.svg';
 
 const FollowTrend = ({ name, username }) => {
   return (

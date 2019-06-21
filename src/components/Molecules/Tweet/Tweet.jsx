@@ -12,7 +12,7 @@ import {
 } from 'react-feather';
 
 // Logo
-import logo from '../../../images/twitter.jpg';
+import logo from '../../../images/logo.svg';
 
 // Atoms
 import { Icon } from '../../Atoms';
