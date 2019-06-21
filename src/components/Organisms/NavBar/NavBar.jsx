@@ -5,18 +5,15 @@ import './styles.scss';
 // Icons
 import { Home, Hash, Bell, Mail } from 'react-feather';
 
-// Logo
-import logo from '../../../images/logo.svg';
-
 // Atoms
-import { Icon } from '../../Atoms';
+import { Icon, Spinner } from '../../Atoms';
 
 const NavBar = ({ location: { pathname } }) => {
   const activeClass = 'navbar__content__nav--selected';
   return (
     <header className="navbar">
       <div className="navbar__logo">
-        <img src={logo} alt="logo" />
+        <Spinner />
         <span>Reactter</span>
       </div>
       <div className="navbar__content-wrapper">

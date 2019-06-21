@@ -1,0 +1,27 @@
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    animation: spinner-spin infinite 20s linear;
+    height: 50px;
+    width: 50px;
+  }
+
+  &--big {
+    img {
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
+
+@keyframes spinner-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

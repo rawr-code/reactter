@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './styles.scss';
 
 // Icons
@@ -10,10 +11,21 @@ import {
   Upload
 } from 'react-feather';
 
+// Logo
+import logo from '../../../images/twitter.png';
+
 // Atoms
 import { Icon } from '../../Atoms';
 
-const Tweet = () => {
+const Tweet = ({
+  username,
+  usertwitter,
+  body,
+  comments,
+  retweets,
+  likes,
+  uploads
+}) => {
   return (
     <div className="tweet">
       <div className="tweet__options">
@@ -22,46 +34,38 @@ const Tweet = () => {
         </Icon>
       </div>
       <div className="tweet__avatar">
-        <img
-          alt="user-img"
-          src="https://pbs.twimg.com/profile_images/1023303162122387456/RjVJbJVf_normal.jpg"
-        />
+        <img alt="user-img" src={logo} />
       </div>
       <div className="tweet__content">
         <div className="tweet__content__userinfo">
-          <span className="tweet__content__username">Emmanuel Villegas</span>
-          <span className="tweet__content__email">@emmanuelV</span>
+          <span className="tweet__content__username">{username}</span>
+          <span className="tweet__content__email">@{usertwitter}</span>
         </div>
-        <div>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati ex
-          sint, temporibus pariatur excepturi tenetur. A debitis repudiandae,
-          enim laborum nisi maxime sapiente facere voluptatem possimus, libero
-          hic provident beatae.
-        </div>
+        <div>{body}</div>
         <div className="tweet__content__options">
           <div className="tweet_content__options__option">
             <Icon>
               <MessageCircle />
             </Icon>
-            <span>500</span>
+            <span>{comments}</span>
           </div>
           <div className="tweet_content__options__option">
             <Icon>
               <Repeat />
             </Icon>
-            <span>500</span>
+            <span>{retweets}</span>
           </div>
           <div className="tweet_content__options__option">
             <Icon>
               <Heart />
             </Icon>
-            <span>500</span>
+            <span>{likes}</span>
           </div>
           <div className="tweet_content__options__option">
             <Icon>
               <Upload />
             </Icon>
-            <span>500</span>
+            <span>{uploads}</span>
           </div>
         </div>
       </div>
@@ -69,4 +73,13 @@ const Tweet = () => {
   );
 };
 
+Tweet.propTypes = {
+  username: PropTypes.string.isRequired,
+  usertwitter: PropTypes.string.isRequired,
+  body: PropTypes.string.isRequired,
+  comments: PropTypes.number.isRequired,
+  retweets: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
+  uploads: PropTypes.number.isRequired
+};
 export default Tweet;

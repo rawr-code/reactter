@@ -15,12 +15,6 @@ $background: rgba(29, 161, 242, 0.1);
   display: flex;
   align-items: center;
 
-  img {
-    animation: navbar__logo-spin infinite 20s linear;
-    height: 50px;
-    width: 50px;
-  }
-
   span {
     color: #fff;
     font-size: 18px;
@@ -103,14 +97,5 @@ $background: rgba(29, 161, 242, 0.1);
     font-size: 15px;
     font-weight: 700;
     margin-left: 10px;
-  }
-}
-
-@keyframes navbar__logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }
