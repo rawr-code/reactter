@@ -11,6 +11,9 @@ import {
   Upload
 } from 'react-feather';
 
+// Logo
+import logo from '../../../images/logo.svg';
+
 // Atoms
 import { Icon } from '../../Atoms';
 
@@ -31,10 +34,7 @@ const Tweet = ({
         </Icon>
       </div>
       <div className="tweet__avatar">
-        <img
-          alt="user-img"
-          src="https://pbs.twimg.com/profile_images/1111729635610382336/_65QFl7B_bigger.png"
-        />
+        <img alt="user-img" src={logo} />
       </div>
       <div className="tweet__content">
         <div className="tweet__content__userinfo">
